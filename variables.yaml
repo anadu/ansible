@@ -10,6 +10,6 @@
       msg: "Hello, I am learning Ansible"
   - name: variable values printing
     ansible.builtin.debug:
-      msg: "my name is {{kishore}} and learning the {{learning}} the job is {{job}}
+      msg: "my name is {{kishore}} and learning the {{learning}} the job is {{job}}"
     
         
