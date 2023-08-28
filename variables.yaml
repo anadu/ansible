@@ -1,6 +1,15 @@
 - name: variables in ansible
   hosts: all
+  vars:
+    name: kishore
+    learning: devops
+    job: some company
   tasks: 
   - name: Print message
     ansible.builtin.debug:
       msg: "Hello, I am learning Ansible"
+  - name: variable values printing
+    ansible.builtin.debug:
+      msg: "my name is {{kishore}}" and learning the {{learning}} the job is {{job}}
+    
+        
