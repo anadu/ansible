@@ -19,4 +19,11 @@
   - name: print the variable name
     ansible.builtin.debug:
       msg: "check the user is presented or not {{out}}"
+  - name: check the directory is exist or not
+  - name: Create a directory if it does not exist
+    ansible.builtin.file:
+    path: /etc/kishore
+    state: directory
+    mode: '0755'  
+
     
