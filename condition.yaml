@@ -21,8 +21,8 @@
       msg: "check the user is presented or not {{out}}"
   - name: check the directory exist or not
     ansible.builtin.file:
-    path: /home/centos/ansible/kishore
-    state: directory
+      path: /home/centos/ansible/kishore
+      state: directory
 
   
     
