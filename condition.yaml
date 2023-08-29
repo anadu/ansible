@@ -7,7 +7,7 @@
     register: out
     ignore_errors: true
   - name: print the variable name
-    ansible.built.in.debug:
+    ansible.builtin.debug:
       msg: "the output is {{out}}"
   - name: create the user
     ansible.builtin.user: 
