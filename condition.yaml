@@ -17,6 +17,6 @@
     ansible.builtin.command: id super 
     register: out
   - name: print the variable name
-    ansible.buitin.debug:
+    ansible.builtin.debug:
       msg: "check the user is presented or not {{out}}"
     
