@@ -6,5 +6,9 @@
     ansible.builtin.command: id roboshop
     register: out
     ignore_errors: true
+  - name: create the user
+    ansible.builtin.user: 
+      name: roboshop
+    when: out.rc != 0     
     
     
