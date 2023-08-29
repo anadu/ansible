@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: checkthe user exist or not
-    ansible.builtin.command: id roboshop
+    ansible.builtin.command: id super
     register: out
     ignore_errors: true
   - name: print the variable name
@@ -11,7 +11,12 @@
       msg: "the output is {{out}}"
   - name: create the user
     ansible.builtin.user: 
-      name: roboshop
+      name: super
     when: out.rc != 0     
-    
+  - name: check the user present or not
+    ansible.builtin.command: id super 
+    register: out
+  - name: print the variable name
+    ansible.buitin.debug:
+      msg: "check the user is presented or not {{out}}"
     
