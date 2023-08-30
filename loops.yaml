@@ -1,0 +1,11 @@
+ - name: loops
+   hosts: localhost
+   become: yes
+   tasks:
+   - name: print the name
+     ansible.builtin.debug:
+       msg: "my name is {{item}}""
+     loop:
+     - kishore
+     - manoj
+     - akka
