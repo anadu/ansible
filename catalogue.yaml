@@ -14,4 +14,8 @@
     ignore_errors: true
   - name: print the out varible
     ansible.builtin.debug:
-      msg: "the out variable is {{out}}"     
+      msg: "the out variable is {{out}}" 
+  - name: create the roboshop user
+     ansible.builtin.user:
+       name: roboshop
+    when out.rc != 0         
