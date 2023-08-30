@@ -8,4 +8,5 @@
       state: "{{item.state}}"
     loop:
     - {name: 'nginx', state: 'installed'}
+    - {name: 'postfix', state: 'installed'}
      
