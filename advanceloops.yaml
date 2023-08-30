@@ -1,0 +1,11 @@
+- name: advanced loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: advanced loops
+    ansible.builtin.yum:
+      name: "{{item.name}}"
+      state: "{{item.name}}"
+    loop:
+    - {name: 'nginx', state: absent}
+     
