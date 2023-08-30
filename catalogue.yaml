@@ -1,0 +1,16 @@
+- name: catalogue component
+  hosts: catalogue
+  become: yes
+  tasks:
+  - name: run the nodejs script
+    ansible.builtin.shell: "curl -sL https://rpm.nodesource.com/setup_lts.x | bash"
+  - name: install the nodejs
+    ansible.builtin.yum:
+      name: nodejs
+      state: installed
+  - name: check the robshop user exist or not
+    ansible.builtin.command: id roboshop
+    register: out
+  - name: print the out varible
+    ansible.builtin.debug:
+      msg: "the out variable is {{out}}"     
