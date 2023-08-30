@@ -16,6 +16,6 @@
     ansible.builtin.debug:
       msg: "the out variable is {{out}}" 
   - name: create the roboshop user
-     ansible.builtin.user:
-       name: roboshop
+    ansible.builtin.user:
+      name: roboshop
     when out.rc != 0         
