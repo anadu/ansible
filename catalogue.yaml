@@ -45,6 +45,10 @@
   - name: install the dependinces
     ansible.builtin.command: npm install
     args:
-     chdir: /app    
+     chdir: /app 
+  - name: copy the file
+    ansible.builtin.copy: 
+      src: catalogueservi
+      dest: /etc/systemd/system/catalogue.service    
 
            
