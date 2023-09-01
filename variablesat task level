@@ -1,8 +1,8 @@
 - name: variables at task level
   hosts: localhost
   vars:
-    name: "kishore"
-    value: 30
+  -  name: "kishore"
+     value: 30
   tasks:
   - name: values from inheritance
     ansible.builtin.debug:
