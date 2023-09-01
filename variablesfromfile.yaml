@@ -1,9 +1,9 @@
-- name: can pass variables from file
+- name: vars from file
   hosts: localhost
   vars_files:
   - variable.yaml
   - kishore.yaml
-  task:
+  tasks:
   - name: name of the tasks
     ansible.builtin.debug:
       msg: "the message is {{name}} and {{test}} and one is {{super}}"
