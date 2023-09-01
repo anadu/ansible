@@ -26,4 +26,10 @@
   - name: print the output variable
     ansible.builtin.debug:
       msg: "the variable of output is {{directory}}"
+  - when directory.stat.exists == False
+    name: create the app directory
+    ansible.builtin.file:
+      path: /app
+      state: directory
+      mode: '0755'    
            
