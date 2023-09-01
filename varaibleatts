@@ -1,0 +1,21 @@
+- name: variables at task levelgit 
+  hosts: localhost
+  vars:
+  - name: "kishore"
+  - value: 30
+  tasks:
+  - name: values from inheritance
+    ansible.builtin.debug:
+      msg: "my name is {{name}} and age is {{value}}"
+  - name: values from child
+    vars:
+    - name: "rahul"
+    - super: "lookinggood"
+    ansible.builtin.debug:
+      msg: "my name is {{name}} and the superis {{super}} and value is {{value}}" 
+  - name: check the syntax
+    vars:
+    - name: "super"
+    - age: 30     
+    ansible.builtin.debug:
+      msg: "my name is {{name}} and age is {{age}}"
