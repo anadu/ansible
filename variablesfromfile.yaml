@@ -1,0 +1,14 @@
+- name: can pass variables from file
+  hosts: localhost
+  vars_files:
+  - variable.yaml
+  - kishore.yaml
+  tasks:
+  - name: name of the tasks
+    ansible.builtin.debug:
+      msg: "the message is {{super}} and {{test}} and one is {{one}}"
+  - name: the varibble value is coming from kishore.yaml
+    ansible.builtin.debug:
+      msg: "the message is {{name}},{{fruit}} and {{today}}"   
+
+    
