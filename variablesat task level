@@ -10,6 +10,6 @@
   - name: values from child
     vars:
     -  name: "rahul"
-       super: "looking good"
+       super: "lookinggood"
     ansible.builtin.debug:
       msg: "my name is {{name}} and the superis {{super}} and value is {{value}}"  
