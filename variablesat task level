@@ -12,4 +12,10 @@
     - name: "rahul"
     - super: "lookinggood"
     ansible.builtin.debug:
-      msg: "my name is {{name}} and the superis {{super}} and value is {{value}}"  
+      msg: "my name is {{name}} and the superis {{super}} and value is {{value}}" 
+  - name: check the syntax
+    vars:
+    - name: "super"
+    - age: 30     
+    ansible.builtin.debug:
+      msg: "my name is {{name}} and age is {{age}}"
