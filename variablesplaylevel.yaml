@@ -1,0 +1,9 @@
+- name: variable at playlevel
+  hosts: localhost
+  vars:
+    Name: "kishore"
+    age: 20
+  tasks:
+  - name: To print the variables at play level
+    ansible.builtin.debug:
+      msg: "my name is {{Name}}, and the age is {{age}}"  
