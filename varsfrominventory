@@ -1,0 +1,7 @@
+- name: varsfrom inventory
+  hosts: mongodb
+  tasks:
+  - name: variables values from inventory
+    ansible.builtin.debug:
+      msg: "The values is coming from inventory {{mangousername}} and {{mangopassword}}"
+  

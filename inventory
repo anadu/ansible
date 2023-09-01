@@ -1,4 +1,7 @@
 [mongodb]
 mongodb-in-dev.kishore.fun
+[mongodb:vars]
+mangousername=kishore
+mangopassword=sensitive
 [catalogue]
 172.31.42.56
