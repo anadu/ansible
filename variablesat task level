@@ -1,0 +1,15 @@
+- name: variables at task level
+  hosts: localhost
+  vars:
+    name: "kishore"
+    value: 30
+  tasks:
+  - name: values from inheritance
+    ansible.builtin.debug:
+      msg: "my name is {{kishore}} and age is {{value}}"
+  - name: values from child
+    vars:
+      name: "rahul"
+      super: "looking good"
+    ansible.builtin.debug:
+      msg: "my name is {{name}} and the superis {{super}} and value is {{value}}"  
