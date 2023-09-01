@@ -6,7 +6,7 @@
   tasks:
   - name: name of the tasks
     ansible.builtin.debug:
-      msg: "the message is {{super}} and {{test}} and one is {{one}}"
+      msg: "the message is {{name}} and {{test}} and one is {{super}}"
   - name: the varibble value is coming from kishore.yaml
     ansible.builtin.debug:
       msg: "the message is {{name}},{{fruit}} and {{today}}"   
