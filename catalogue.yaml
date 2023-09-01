@@ -31,5 +31,16 @@
     ansible.builtin.file:
       path: /app
       state: directory
-      mode: '0755'    
+      mode: '0755'   
+  - name: Download the code
+    ansible.builtin.get_url:
+      url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
+      dest: /tmp/catalogue.zip 
+      mode: 0755
+  - name: unzip the file
+    ansible.builtin.unarchive:
+      src: tmp/catalogue.zip
+      dest: /app
+      remote_src: yes
+
            
