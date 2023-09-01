@@ -39,7 +39,7 @@
       mode: 0755
   - name: unzip the file
     ansible.builtin.unarchive:
-      src: tmp/catalogue.zip
+      src: /tmp/catalogue.zip
       dest: /app
       remote_src: yes
 
