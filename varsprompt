@@ -1,5 +1,5 @@
 - name: varsfromprompt
-  host: mongodb
+  hosts: localhost
   vars_prompt:
   - name: username
     prompt: please enter the username
